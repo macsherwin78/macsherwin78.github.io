@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
-    <title>Weather Analysis by Lattitudes</title>
+
+    <title>Wind Speed</title>
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -18,20 +20,19 @@
 <body>
     <nav class="navbar navbar-default navbar-expand-lg">
         <div class="container-fluid">
-            <div class="navbar-header">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">Lattitude</a>
-            </div>
-        </div>     
+        <div class="navbar-header">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Lattitude</a>
+        </div>
+        </div>    
                 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown active">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Plots
-                        <span class="caret"></span>
                     </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="max_temp.html">Max Temperature</a>
@@ -52,37 +53,23 @@
 
     <div class="container">
         <div class="row row-grid">
+
             <div class="col-md-8">
                 <div class="box box-left">
                     <section id="intro">
-                        <h1>Summary</h1>
+                        <h1>Windiness</h1>
                         <hr>
                         <figure>
-                            <a target="_blank" href="Ploting_graph_of_Cities.png">
-                                <img id="main" src="lat_vs_max_temp.png" alt="lat_vs_max_temp" class="pull-left">
+                            <a target="_blank" href="lat_vs_wind_speed.png">
+                                <img id="main" src="lat_vs_wind_speed.png" alt="Latitude vs. Wind Speed">
                             </a>
                         </figure>
 
                         <section id="summary">
-                            <p>The purpose of this project was to analyze how weather changes as you get closer to the equator.
+                            <p>TObservation on City Latitude vs. Humidity graph is also evident on the City Latitude vs. Wind Speed on reverse.
+                                    This is expected as wind speed is inversely related with the humidity.
+                                    As it gets more humid the air gets denser thus, slower speed.
                             </p>
-
-                            <p> To accomplish this analysis,
-                              we first pulled data from the OpenWeatherMap API
-                              to assemble a dataset on over 500 cities.
-                            </p>
-
-                            <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude.
-                              Factors we looked at included:
-                              Temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.
-                            </p>
-
-                            <ul>
-                                <li>Temperature</li>
-                                <li>Cloudiness</li>
-                                <li>Wind Speed</li>
-                                <li>Humidity</li>
-                            </ul>
                         </section>
 
                     </section>
@@ -94,6 +81,7 @@
                 <div class="box box-right">
                     <h2>Visualizations</h2>
                     <hr>
+
 
                     <div class="row">
                         <div class="col-xs-6 col-sm-3 col-md-6">
@@ -136,13 +124,11 @@
     </div>
 
 
-
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous">
         </script>
-
 </body>
 
 </html>
